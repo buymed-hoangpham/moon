@@ -100,11 +100,22 @@ export default function App() {
         <div className="flex flex-col items-center justify-center w-full h-full relative">
           <MoonSphere phase={globalPhase} size="xl" className="w-[80vw] h-[80vw] md:w-[60vw] md:h-[60vw] max-w-[600px] max-h-[600px]" />
           
-          {/* Romantic Text Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif italic text-rose-200 drop-shadow-[0_0_25px_rgba(255,192,203,0.8)] animate-pulse tracking-wide select-none mix-blend-screen">
-              Hoàng <span className="text-red-500 drop-shadow-[0_0_15px_rgba(255,0,0,0.8)] mx-2 md:mx-4">❤️</span> Nhi
-            </h2>
+          {/* Romantic Text Overlay - Typographic Redesign for Mobile & Desktop */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 select-none">
+            {/* Mobile: Asymmetric editorial stack (fits 390px-412px perfectly). Desktop: Inline */}
+            <div className="flex flex-col md:flex-row items-center w-full px-8 md:px-0 md:justify-center">
+              <h2 className="text-[14vw] sm:text-6xl md:text-7xl lg:text-8xl font-serif italic text-rose-100/90 drop-shadow-[0_0_30px_rgba(255,192,203,0.8)] mix-blend-plus-lighter tracking-[0.05em] self-start md:self-auto transform -translate-y-4 md:translate-y-0 transition-all duration-1000">
+                Hoàng
+              </h2>
+              
+              <span className="text-4xl sm:text-5xl text-red-500/90 drop-shadow-[0_0_20px_rgba(255,0,0,1)] animate-pulse z-10 -my-2 md:my-0 md:mx-8 transition-all duration-1000">
+                ❤️
+              </span>
+              
+              <h2 className="text-[14vw] sm:text-6xl md:text-7xl lg:text-8xl font-serif italic text-rose-100/90 drop-shadow-[0_0_30px_rgba(255,192,203,0.8)] mix-blend-plus-lighter tracking-[0.05em] self-end md:self-auto transform translate-y-4 md:translate-y-0 transition-all duration-1000">
+                Nhi
+              </h2>
+            </div>
           </div>
         </div>
       </main>
